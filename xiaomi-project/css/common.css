@@ -164,7 +164,10 @@
     float: left;
     width: 127px;
     padding-right: 15px;
-    opacity: 0;
+    opacity: 1;
+}
+.header-nav .nav-category:hover a{
+    color: #FF5B00;
 }
 .header-nav .nav-category .link-category {
     display: block;
@@ -614,6 +617,10 @@
 }
 #right-fixed-bar .fixed-last{
     margin-top: 14px;
+    display: none;
+}
+.block{
+    display: block !important;
 }
 
 
