@@ -15,5 +15,55 @@
       "password": "1234qw",
       "id": 3
     }
+  ],
+  "goods": [
+    {
+      "id": 1,
+      "src": "./upload/iPhone_03.png",
+      "name": "Xiaomi 11 青春活力版",
+      "price": 1999
+    },
+    {
+      "id": 2,
+      "src": "./upload/iPhone_03.png",
+      "name": "Xiaomi 黑鲨",
+      "price": 3799
+    },
+    {
+      "id": 3,
+      "src": "./upload/iPhone_03.png",
+      "name": "Xiaomi Pro 系列",
+      "price": 4999
+    },
+    {
+      "id": 4,
+      "src": "./upload/iPhone_03.png",
+      "name": "Xiaomi 11 4G",
+      "price": 1599
+    },
+    {
+      "id": 5,
+      "src": "./upload/iPhone_03.png",
+      "name": "Xiaomi 11 5G",
+      "price": 2199
+    },
+    {
+      "id": 6,
+      "src": "./upload/iPhone_03.png",
+      "name": "Xiaomi Civi",
+      "price": 2499
+    },
+    {
+      "id": 7,
+      "src": "./upload/iPhone_03.png",
+      "name": "Xiaomi MIX 4",
+      "price": 3299
+    },
+    {
+      "id": 8,
+      "src": "./upload/iPhone_03.png",
+      "name": "Redmi K40",
+      "price": 1399
+    }
   ]
 }
