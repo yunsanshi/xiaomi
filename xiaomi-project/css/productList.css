@@ -1,0 +1,73 @@
+/* 产品title */
+#product-head{
+    height: 40px;
+    font-size: 12px;
+    color: #757575;
+    line-height: 40px;
+    background: #f5f5f5;
+}
+#product-head a{
+    color: #757575;
+}
+#product-head .sep{
+    margin: 0 0.5em;
+    color: #b0b0b0;
+    font-family: sans-serif;
+}
+
+/* 产品展示 */
+#product-show .layui-container{
+    margin-bottom: 100px;
+}
+.product-box .pro-tab{
+    height: 60px;
+    padding-top: 14px;
+}
+.product-box .pro-tab .title{
+    font-size: 18px;
+    color: #ff6700;
+    font-weight: 400;
+    cursor: pointer;
+    height: 60px;
+    line-height: 60px;
+}
+.product-box .pro-tab .title i{
+    color: #b0b0b0;
+    padding: 5px;
+    border: 1px solid #b0b0b0;
+    border-radius: 50px;
+    margin-right: 5px;
+}
+
+.product-box .pro-list{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    border-top: 1px solid #e0e0e0;
+}
+.product-box .pro-list li{
+    width: 244px;
+    height: 136px;
+    padding-top: 24px;
+    border-right: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+    text-align: center;
+    list-style: none;
+    display: inline-block;
+}
+.product-box .pro-list li a img{
+    display: block;
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 24px;
+    border: 0;
+}
+.product-box .pro-list li a span{
+    display: block;
+    max-height: 20px;
+    overflow: hidden;
+    line-height: 20px;
+}
+.product-box .pro-list li a span:last-child{
+    text-align: right;
+}

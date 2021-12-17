@@ -20,3 +20,22 @@ for(let i=0;i<navItem.length-2;i++){
         headerNavMeau.style.display = 'none'
     }
 }
+
+// 回到顶部调用
+class retrunTop{
+    constructor(){
+        this.reTop()
+    }
+    reTop(){
+        let reTop = document.querySelector('#right-fixed-bar .fixed-last')
+        window.onscroll = () => {
+            if (window.scrollY > window.innerHeight) {
+                reTop.classList.add('block')
+            } else {
+                reTop.classList.remove('block')
+            }
+        }
+    }
+}
+new retrunTop()
+// 回到顶部

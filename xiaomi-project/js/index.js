@@ -8,22 +8,8 @@ class Indexone {
         this.init()
     }
     init() {
-        // 回到顶部调用
-        this.retrunTop()
         // 选项卡调用
         this.wearTab()
-    }
-
-    // 回到顶部
-    retrunTop() {
-        let reTop = document.querySelector('#right-fixed-bar .fixed-last')
-        window.onscroll = () => {
-            if (window.scrollY > window.innerHeight) {
-                reTop.classList.add('block')
-            } else {
-                reTop.classList.remove('block')
-            }
-        }
     }
 
     // 选项卡

@@ -1,0 +1,19 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "大力牛魔王",
+      "password": 123456
+    },
+    {
+      "username": "13577896452",
+      "password": "az1234",
+      "id": 2
+    },
+    {
+      "username": "123@qq.com",
+      "password": "1234qw",
+      "id": 3
+    }
+  ]
+}

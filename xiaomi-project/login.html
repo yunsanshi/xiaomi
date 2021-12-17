@@ -16,7 +16,7 @@
     <div class="header ">
         <div class="w">
             <div class="logo">
-                <a href="index1.html">
+                <a href="index.html">
                     <img src="upload/logo.png" alt="">
                 </a>
             </div>
@@ -25,7 +25,7 @@
     <!-- 从广告栏开始 -->
     <div class="banner">
         <div class="banner-box w">
-            <img src="upload/banner_02.png" alt="">
+            <img src="upload/banner_02.png" alt="" class="banner-imgone">
             <div class="banner-box-right w">
                 <div class="banner-box-list">
                     <div class="banner-box-logo">
@@ -44,9 +44,9 @@
                     <input type="submit" value="登陆账号" class="txt2" id="btn1">
                     <div class="login-btn-box">
                         <ul>
-                            <li><a href="register.html">立即注册 </a> </li>
+                            <li><a href="register.html" target="_blank">立即注册 </a> </li>
                             <li class="spacers"><a href="#">|        </a> </li>
-                            <li><a href="#">忘记密码？ </a> </li>
+                            <li><a href="#none">忘记密码？ </a> </li>
                         </ul>
                     </div>
 
@@ -55,16 +55,16 @@
                 <div class="banner-right-bottom">
                     <ul>
                         <li>
-                            <a href="#"><img src="upload/icon01_03.png" alt=""></a>
+                            <a href="#none"><img src="upload/icon01_03.png" alt=""></a>
                         </li>
                         <li>
-                            <a href="#"><img src="upload/icon01_05.png" alt=""></a>
+                            <a href="#none"><img src="upload/icon01_05.png" alt=""></a>
                         </li>
                         <li>
-                            <a href="#"><img src="upload/icon01_07.png" alt=""></a>
+                            <a href="#none"><img src="upload/icon01_07.png" alt=""></a>
                         </li>
                         <li>
-                            <a href="#"><img src="upload/icon01_09.png" alt=""></a>
+                            <a href="#none"><img src="upload/icon01_09.png" alt=""></a>
                         </li>
                     </ul>
                 </div>
@@ -77,15 +77,15 @@
     <div class="footer">
         <div class="footer-box w">
             <ul>
-                <li><a href="#">简体</a> </li>
+                <li><a href="#none">简体</a> </li>
                 <li>|</li>
-                <li><a href="#">繁体 </a> </li>
+                <li><a href="#none">繁体 </a> </li>
                 <li>|</li>
-                <li><a href="#"> English</a> </li>
+                <li><a href="#none"> English</a> </li>
                 <li>|</li>
-                <li><a href="#"> 常见问题</a></li>
+                <li><a href="#none"> 常见问题</a></li>
                 <li>|</li>
-                <li><a href="#">隐私政策</a> </li>
+                <li><a href="#none">隐私政策</a> </li>
 
 
             </ul>
@@ -94,41 +94,11 @@
         </div>
 
     </div>
-    <script src="js/jquery.min.js"></script>
-    <script>
-        $('#btn1').on('click', function() {
-            var username = $('#username').val();
-            var password = $('#pwd').val();
-            if (username.trim().length == 0) {
-                alert('请输入用户名')
+    
 
-            }
-            if (password.trim().length == 0) {
-                alert('请输入密码');
-                return;
-            }
-            $.ajax({
-                type: 'POST',
-                url: '../php/login.php',
-                data: {
-                    username: username,
-                    password: password
-                },
-                success: function(result) {
-                    console.log(result)
-                    if (result.code) {
-                        location.href = 'index1.html'
-                    } else {
-                        console.log(2)
-                    }
+    <script src = "https://unpkg.com/axios/dist/axios.min.js"></script>
 
-                },
-                dataType: 'json'
-
-            })
-        });
-    </script>
-
+    <script src="./js/login.js"></script>
 </body>
 
 </html>

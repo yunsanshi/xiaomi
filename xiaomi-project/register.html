@@ -16,7 +16,7 @@
     <div class="header ">
         <div class="w">
             <div class="logo">
-                <a href="index1.html">
+                <a href="index.html">
                     <img src="upload/logo.png" alt="">
                 </a>
             </div>
@@ -25,7 +25,7 @@
     <!-- 从广告栏开始 -->
     <div class="banner">
         <div class="banner-box w">
-            <img src="upload/banner_02.png" alt="">
+            <img src="upload/banner_02.png" alt="" width="100%">
             <div class="banner-box-right w">
                 <div class="banner-box-list">
                     <div class="banner-box-logo">
@@ -36,21 +36,20 @@
                 </div>
                 <!-- 账号登录模块 -->
                 <div class="banner-box-con">
-                    <form action="./php/register.php" method="GET">
-                        <label for="username"> <input class="txt1" autocomplete="off" type="text" name="user" id="username" placeholder="邮箱/手机号码/小米ID"></label>
+                    <!-- <form> -->
+                        <label for="username"> <input class="txt1" autocomplete="off" type="text" name="user" id="username" placeholder="邮箱/手机号码/小米ID"></label><span></span>
 
+                        <label for="pwd">      <input class="txt1" type="password" placeholder="密码(包含大小写数字)" autocomplete="off" id="pwd" name="password"></label><span></span>
 
-                        <label for="pwd">      <input class="txt1" type="password" placeholder="密码" autocomplete="off" id="pwd" name="password"></label>
+                        <label for="pwds"> <input class="txt1" type="password" placeholder="确认密码" autocomplete="off" id="pwds" ></label><span></span>
+                        <input type="submit" value="注册账号" class="txt2" >
 
-                        <label for="pwds"> <input class="txt1" type="password" placeholder="确认密码" autocomplete="off" id="pwds" > </label>
-                        <input type="submit" value="注册账号" class="txt2">
-
-                    </form>
+                    <!-- </form> -->
                     <div class="login-btn-box">
                         <ul>
-                            <li><a href="login.html">立即登录</a> </li>
-                            <li><a href="#">|        </a> </li>
-                            <li><a href="#">忘记密码？ </a> </li>
+                            <li><a href="login.html" target="_blank">立即登录</a> </li>
+                            <li><a href="#none">|        </a> </li>
+                            <li><a href="#none">忘记密码？ </a> </li>
                         </ul>
                     </div>
 
@@ -59,16 +58,16 @@
                 <div class="banner-right-bottom">
                     <ul>
                         <li>
-                            <a href="#"><img src="upload/icon01_03.png" alt=""></a>
+                            <a href="#none"><img src="upload/icon01_03.png" alt=""></a>
                         </li>
                         <li>
-                            <a href="#"><img src="upload/icon01_05.png" alt=""></a>
+                            <a href="#none"><img src="upload/icon01_05.png" alt=""></a>
                         </li>
                         <li>
-                            <a href="#"><img src="upload/icon01_07.png" alt=""></a>
+                            <a href="#none"><img src="upload/icon01_07.png" alt=""></a>
                         </li>
                         <li>
-                            <a href="#"><img src="upload/icon01_09.png" alt=""></a>
+                            <a href="#none"><img src="upload/icon01_09.png" alt=""></a>
                         </li>
                     </ul>
                 </div>
@@ -81,15 +80,15 @@
     <div class="footer">
         <div class="footer-box w">
             <ul>
-                <li><a href="#">简体</a> </li>
+                <li><a href="#none">简体</a> </li>
                 <li>|</li>
-                <li><a href="#">繁体 </a> </li>
+                <li><a href="#none">繁体 </a> </li>
                 <li>|</li>
-                <li><a href="#"> English</a> </li>
+                <li><a href="#none"> English</a> </li>
                 <li>|</li>
-                <li><a href="#"> 常见问题</a></li>
+                <li><a href="#none"> 常见问题</a></li>
                 <li>|</li>
-                <li><a href="#">隐私政策</a> </li>
+                <li><a href="#none">隐私政策</a> </li>
 
 
             </ul>
@@ -98,6 +97,10 @@
         </div>
 
     </div>
+
+    <script src = "https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <script src="./js/register.js"></script>
 </body>
 
 </html>

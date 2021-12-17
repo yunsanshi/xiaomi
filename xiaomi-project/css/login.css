@@ -1,5 +1,5 @@
 .w {
-    width: 1366px;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -40,6 +40,9 @@
     height: 588px;
 }
 
+.banner-imgone{
+    width: 100%;
+}
 .banner-box-right {
     position: absolute;
     top: 31px;
