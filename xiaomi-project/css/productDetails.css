@@ -1,0 +1,166 @@
+#header-nav-meau{
+    z-index: 1001;
+}
+.link-bar .code{
+    z-index: 1001;
+}
+
+/* 用户评价栏 */
+#evealuation {
+    position: relative;
+    width: 100%;
+    height: 63px;
+    margin-top: 0;
+    color: #616161;
+    z-index: 1000;
+    background: #fff;
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+    box-shadow: 0 5px 5px rgb(0 0 0 / 7%);
+}
+
+#evealuation h2 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 60px;
+    color: #424242;
+    float: left;
+}
+
+#evealuation .eveacomment {
+    float: right;
+    margin: 17px 0 0 0;
+    line-height: 16px;
+    color: #616161;
+}
+#evealuation .eveacomment:hover{
+    color: #FF5B00;
+}
+
+/* 提示页面登录 */
+#pageSign{
+    background: #f7f7f7;
+    width: 100%;
+    text-align: center;
+    height: 48px;
+    line-height: 48px;
+    color: #333;
+}
+#pageSign .layui-container{
+    line-height: 48px;
+}
+#pageSign .login{
+    color: #ff6700;
+    margin-left: 25px;
+    display: inline-block;
+    cursor: pointer;
+}
+#pageSign i{
+    color: #b5b5b5;
+    font-size: 18px;
+    vertical-align: middle;
+    margin-left: 10px;
+    font-weight: 700;
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* 商品详情 */
+#pro-details .detailsBox{
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: center;
+    padding-top: 32px;
+    padding-bottom: 12px;
+}
+.detailsBox .img-left{
+    width: 606px;
+    position: relative;
+}
+.detailsBox .img-left img{
+    width: 560px;
+    height: 560px;
+}
+.detailsBox .content-pro{
+    flex: 1;
+    margin-left: 20px;
+}
+.detailsBox .content-pro h2{
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
+    font-weight: 400;
+    color: #212121;
+}
+.detailsBox .content-pro .sale-desc{
+    color: #b0b0b0;
+    margin: 0;
+    padding: 0;
+    padding-top: 8px;
+    line-height: 1.5;
+}
+.detailsBox .content-pro .company-info{
+    color: #ff6700;
+    margin-bottom: 0;
+}
+.detailsBox .content-pro .price-info{
+    display: block;
+    font-size: 18px;
+    line-height: 1;
+    color: #ff6700;
+    padding: 12px 0 10px;
+}
+.detailsBox .content-pro .price-info span{
+    display: inline-block;
+}
+.detailsBox .content-pro .price-info del{
+    font-size: 14px;
+    margin-left: 5px;
+    color: #b0b0b0;
+}
+.detailsBox .content-pro .line{
+    margin-top: 12px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.detailsBox .content-pro .address-box{
+    margin: 20px 0;
+}
+.content-pro .address-box .address-pro{
+    padding: 30px 50px;
+    position: relative;
+    background: #fafafa;
+    border: 1px solid #e0e0e0;
+}
+.address-box .address-pro .iconfont{
+    position: absolute;
+    left: 20px;
+    top: 26px;
+    font-size: 20px;
+    color: #999;
+}
+.address-pro .address-con div:nth-child(1){
+    line-height: 21px;
+}
+.address-pro .address-con .address-info{
+    display: inline-block;
+    line-height: 21px;
+}
+.address-pro .address-con .address-info span{
+    display: inline;
+    margin-right: 14px;
+}
+.address-pro .address-con .edit{
+    color: #ff6700;
+    margin: 0;
+    display: inline-block;
+    cursor: pointer;
+}
+.address-pro .address-con .desc{
+    line-height: 21px;
+}
+.address-pro .address-con .desc span{
+    color: #ff6700;
+    margin: 0;
+}

@@ -64,6 +64,7 @@
     display: inline-block;
     float: left;
     position: relative;
+    overflow: hidden;
 }
 .product-box .pro-list li a img{
     display: block;
@@ -95,11 +96,11 @@
     position: absolute;
     bottom: -40px;
     left: calc(50% - 60px);
-    opacity: 0;
+    transition: all .3s;
+    visibility: hidden;
 }
 .product-box .pro-list li a:hover span:last-child{
-    opacity: 1;
+    visibility: visible;
     transform: translate3d(0,-170%,0);
-    transition: all .2s;
     color: #fff;
 }

@@ -19,7 +19,7 @@
     position: absolute;
     transform: translateZ(0);
     z-index: 10;
-    width: 400px;
+    width: 100px;
     left: auto;
     right: 30px;
     bottom: 20px;

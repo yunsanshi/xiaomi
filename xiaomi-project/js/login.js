@@ -25,7 +25,7 @@ class Login{
                 }
             }).catch(res =>{
                 alert('请输入正确的用户名和密码')
-                this.name.value = ''
+                // this.name.value = ''
                 this.pwd.value = ''
             })
             

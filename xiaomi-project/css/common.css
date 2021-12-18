@@ -505,7 +505,7 @@
     right: auto;
     margin-left: 613px;
     bottom: 40px;
-    z-index: 99;
+    z-index: 1005;
 }
 .right-fixed-item{
     position: relative;

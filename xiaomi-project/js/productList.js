@@ -10,12 +10,51 @@ class Goodshow{
     }
 
     show(){
+        let proUl = document.querySelector('.product-box .pro-list')
         axios.get('http://localhost:3000/goods').then(res =>{
+            let html = ''
             res.data.forEach(item =>{
-                console.log(item);
+                // console.log(item);
+                let people = Math.random()*(230 - 10) + 10
+                let newPeople = people.toFixed(2)
+                html += `<li>
+                <a href="#none">
+                    <img src="${item.src}" alt="">
+                    <span>${item.name}</span>
+                    <span>￥：${item.price}</span>
+                    <span>${newPeople}万人关注</span>
+                    <span onclick="Goodshow.addCart(${item.id},1)">加入购物车</span>
+                </a>
+            </li>`
             })
+            proUl.innerHTML = html
         })
     }
+
+    static addCart(id,num){
+        // 获取local中的数据
+        let cartGoods = localStorage.getItem('xiaomicart')
+        // 判断是否存在数据
+        if(cartGoods){   // 有数据
+            // 将json转为对象
+            cartGoods = JSON.parse(cartGoods)
+            // 判断购物车中是否已存在当前添加的商品，如存在商品数量加一
+            for(let attr in cartGoods){
+                // 数量增加1
+                attr == id && (num += cartGoods[attr])
+            }
+            // 将数量添加进，保存local数据
+            cartGoods[id] = num
+            localStorage.setItem('xiaomicart',JSON.stringify(cartGoods))
+        }else{   // 无数据
+            cartGoods = {
+                [id] : num
+            }
+            localStorage.setItem('xiaomicart',JSON.stringify(cartGoods))
+        }
+    }
+
+
 
 
     static rotate(){
