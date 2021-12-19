@@ -63,3 +63,210 @@
 #header .header-info .link:hover{
     color: #FF5B00;
 }
+
+/* 商品购物车列表 */
+#cart{
+    padding: 38px 0;
+    background: #f5f5f5;
+}
+#cart .addonitems-tips{
+    text-align: right;
+    font-size: 14px;
+    color: rgba(0,0,0,.54);
+    line-height: 20px;
+    margin-bottom: 13px;
+}
+#cart .addonitems-tips div{
+    display: inline-block;
+}
+#cart .addonitems-tips a{
+    margin-left: 12px;
+    color: rgba(0,0,0,.87);
+}
+#cart .cartTable{
+    height: 70px;
+    line-height: 70px;
+    color: #424242;
+    background-color: #fff;
+    font-size: 14px;
+}
+#cart .cartTable .cart-check{
+    width: 110px;
+}
+#cart .cartTable .cart-img{
+    width: 120px;
+}
+#cart .cartTable .cart-name{
+    width: 380px;
+    text-align: left;
+}
+#cart .cartTable .cart-price{
+    width: 140px;
+    padding-right: 18px;
+    text-align: center;
+    color: #424242;
+}
+#cart .cartTable .cart-num{
+    width: 150px;
+    text-align: center;
+    color: #424242;
+}
+#cart .cartTable .cart-total{
+    width: 120px;
+    padding-right: 81px;
+    text-align: right;
+}
+#cart .cartTable .cart-action{
+    width: 80px;
+    padding-right: 26px;
+    text-align: center;
+}
+#cart .cartTable .table-row{
+    padding: 15px 26px 15px 0;
+    border-top: 1px solid #e0e0e0;
+    text-align: center;
+    height: 117px;
+}
+#cart .cartTable .table-row .cart-name a{
+    color: #424242;
+    font-size: 18px;
+}
+.cart-num .add, .cart-num input, .cart-num .reduce {
+    float: left;
+    margin-right: -1px;
+    position: relative;
+    z-index: 0;
+}
+.cart-num .add, .cart-num .reduce {
+    height: 35px;
+    width: 35px;
+    border: 1px solid #e5e5e5;
+    background: #fff;
+    text-align: center;
+    line-height: 35px;
+    color: #444;
+}
+.cart-num .add:hover, .cart-num .reduce:hover {
+    color: #f50;
+    z-index: 3;
+    border-color: #f60;
+    cursor: pointer;
+}
+.cart-num input {
+    width: 77px;
+    height: 27px;
+    line-height: 27px;
+    border: 1px solid #aaa;
+    color: #343434;
+    text-align: center;
+    padding: 4px 0;
+    background-color: #fff;
+    z-index: 2;
+}
+.table-row .total{
+    color: #ff6700;
+    font-size: 18px;
+}
+.table-row .action i{
+    padding: 5px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    color: #757575;
+    font-size: 16px;
+    transition: all .3s;
+}
+.table-row .action i:hover{
+    color: #fff;
+    background-color: #e53935;
+}
+#cart .cart-settlement{
+    height: 50px;
+    text-align: right;
+    background-color: #fff;
+    position: relative;
+    margin: 20px 0;
+    transition: background .3s ease,top .3s cubic-bezier(0.25, 0.1, 1, 0);
+}
+.cart-settlement .cart-bar-left{
+    float: left;
+}
+.cart-settlement .cart-bar-left a{
+    line-height: 50px;
+    margin-left: 32px;
+}
+.cart-settlement .cart-bar-left span{
+    margin-left: 16px;
+    padding-left: 16px;
+    border-left: 1px solid #eee;
+    color: #757575;
+}
+.cart-settlement .cart-bar-left span i{
+    color: #ff6700;
+}
+.cart-settlement .total-price{
+    padding-left: 13px;
+    color: #ff6700;
+}
+.cart-settlement .total-price em{
+    font-style: normal;
+    font-size: 30px;
+}
+.cart-settlement .total-price .btn{
+    width: 200px;
+    height: 48px;
+    line-height: 48px;
+    font-size: 18px;
+    margin-left: 50px;
+    vertical-align: top;
+    display: inline-block;
+    padding: 0;
+    border: 1px solid #b0b0b0;
+    text-align: center;
+}
+.cart-settlement .total-price .btn-disabled{
+    background: #e0e0e0!important;
+    border-color: #e0e0e0!important;
+    color: #b0b0b0!important;
+    cursor: default!important;
+}
+.cart-settlement .total-price .btn-primary{
+    background: #ff6700;
+    border-color: #ff6700;
+    color: #fff;
+}
+.cart-settlement .no-select-tip{
+    width: 200px;
+    height: 48px;
+    line-height: 48px;
+    position: absolute;
+    top: -58px;
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ff6700;
+    color: #ff6700;
+    text-align: center;
+}
+.cart-settlement .no-select-tip .arrow{
+    display: block;
+    width: 0;
+    height: 0;
+    border-style: solid dashed dashed;
+    overflow: hidden;
+    position: absolute;
+    left: 50%;
+}
+.cart-settlement .no-select-tip .arrow-a{
+    bottom: -8px;
+    margin-left: -10px;
+    border-width: 8px 10px 0;
+    border-color: #ff6700 rgba(0,0,0,0) rgba(0,0,0,0);
+    z-index: 1;
+}
+.cart-settlement .no-select-tip .arrow-b{
+    bottom: -7px;
+    margin-left: -8px;
+    border-width: 7px 8px 0;
+    border-color: #fff rgba(0,0,0,0) rgba(0,0,0,0);
+    z-index: 2;
+}

@@ -120,7 +120,6 @@ class Banner {
 
     clear(){
         let that = this
-        console.log(this.banbox);
         this.banbox.onmouseover = ()=>{
             clearInterval(that.timer)
         }

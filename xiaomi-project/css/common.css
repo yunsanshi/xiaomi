@@ -633,3 +633,7 @@
     clear: both;
     height: 0;
 }
+
+.hide{
+    display: none;
+}
