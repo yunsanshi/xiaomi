@@ -18,7 +18,7 @@ class Goodshow{
                 let people = Math.random()*(230 - 10) + 10
                 let newPeople = people.toFixed(2)
                 html += `<li>
-                <a href="#none">
+                <a href="/xiaomi/xiaomi-project/productDetails.html?id=${item.id}">
                     <img src="${item.src}" alt="">
                     <span>${item.name}</span>
                     <span>￥：${item.price}</span>

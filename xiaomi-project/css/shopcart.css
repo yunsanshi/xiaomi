@@ -225,10 +225,10 @@
     text-align: center;
 }
 .cart-settlement .total-price .btn-disabled{
-    background: #e0e0e0!important;
-    border-color: #e0e0e0!important;
-    color: #b0b0b0!important;
-    cursor: default!important;
+    background: #e0e0e0 !important;
+    border-color: #e0e0e0 !important;
+    color: #b0b0b0 !important;
+    cursor: default !important;
 }
 .cart-settlement .total-price .btn-primary{
     background: #ff6700;

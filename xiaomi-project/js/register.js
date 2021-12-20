@@ -55,7 +55,11 @@ class Register{
             if(!this.name.value || !this.pwd.value || !this.pwds.value) return
             let data = `username=${this.name.value}&password=${this.pwds.value}`
             axios.post('http://localhost:3000/users',data).then(data =>{
-                console.log(data);
+                // data.forEach(item =>{
+                //     if(username ==  item.username){
+                //         alert('已注册')
+                //     }
+                // })
                 window.location.href = '/xiaomi/xiaomi-project/login.html'
             }).catch(data =>{
                 alert('注册信息错误')

@@ -164,3 +164,124 @@
     color: #ff6700;
     margin: 0;
 }
+
+/* 版本颜色 */
+.content-pro .buy-option .buy-edition{
+    margin-bottom: 30px;
+    position: relative;
+}
+.content-pro .buy-option .edition-title{
+    font-size: 18px;
+}
+.content-pro .buy-option ul{
+    margin: 0;
+    padding: 0;
+}
+.content-pro .buy-option ul li{
+    margin-right: 12px;
+    margin-top: 10px;
+    line-height: 42px;
+    height: 42px;
+    position: relative;
+    border: 1px solid #e0e0e0;
+    list-style: none;
+    cursor: pointer;
+    transition: all .2s ease;
+    float: left;
+    width: 292px;
+    font-size: 16px;
+    text-align: center;
+}
+.content-pro .buy-option ul li:nth-child(2n){
+    margin-right: 0;
+}
+.content-pro .buy-option ul .active{
+    border-color: #ff6700;
+    color: #ff6700;
+}
+
+.content-pro .buy-option .buy-color{
+    margin-bottom: 30px;
+    position: relative;
+}
+
+/* 加入购物车 */
+.content-pro .btn-cartlike{
+    margin: 40px 0 20px 0;
+}
+.content-pro .btn-cartlike .btn-cart{
+    display: inline-block;
+    margin-right: 10px;
+    width: 298px;
+    height: 52px;
+    line-height: 52px;
+    font-size: 16px;
+    background: #ff6700;
+    border-color: #ff6700;
+    color: #fff;
+    border: 1px solid #ff6700;
+    text-align: center;
+}
+.content-pro .btn-cartlike .btn-like{
+    display: inline-block;
+    vertical-align: top;
+    width: 140px;
+    height: 52px;
+    line-height: 52px;
+    padding: 0;
+    margin: 0;
+    border: 1px solid #b0b0b0;
+    text-align: center;
+    cursor: pointer;
+    transition: all .4s;
+    font-size: 16px;
+    position: relative;
+    background: #b0b0b0;
+    color: #fff;
+}
+.content-pro .btn-cartlike .btn-like i{
+    font-size: 22px;
+    line-height: 23px;
+    vertical-align: -4px;
+    margin-right: 5px;
+}
+.content-pro .btn-cartlike .btn-like:hover{
+    background-color: #757575;
+    border-color: #757575;
+    color: #fff;
+}
+
+/* 标签 */
+.content-pro .after-lable span{
+    display: inline-block;
+    margin-right: 15px;
+    line-height: 30px;
+    margin-bottom: 10px;
+    cursor: default;
+    white-space: nowrap;
+    color: #b0b0b0;
+    vertical-align: middle;
+}
+.content-pro .after-lable span i{
+    font-size: 20px;
+    display: inline-block;
+    font-style: normal;
+    vertical-align: middle;
+    margin-right: 2px;
+}
+
+/* 价格说明 */
+#priceDes{
+    background: #F5F5F5;
+    padding-bottom: 30px;
+}
+#priceDes .pricedes-title{
+    font-size: 22px;
+    font-weight: 400;
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 77px;
+}
+#priceDes img{
+    height: 189px;
+}

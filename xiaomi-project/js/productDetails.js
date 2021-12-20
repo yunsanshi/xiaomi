@@ -34,6 +34,37 @@ class Details{
         i.onclick = ()=>{
             sign.setAttribute('style','display:none')
         }
+        let name = localStorage.getItem('name')
+        if(name){
+            sign.setAttribute('style','display:none')
+        }
     }
 }
 new Details()
+
+// 版本，颜色的状态
+function active(ele){
+    let li = document.querySelectorAll(ele)
+    for(let i=0;i<li.length;i++){
+        li[i].onclick = ()=>{
+            for(let j=0;j<li.length;j++){
+                li[j].classList.remove('active')
+            }
+            li[i].classList.add('active')
+        }
+    }
+}
+active('.buy-edition li')
+active('.buy-color li')
+active('.buy-suit li')
+
+class Content{
+    constructor(){
+        // console.log(location.href.split('?')[1].split('=')[1]);
+        this.contentshow()
+    }
+    contentshow(){
+        
+    }
+}
+new Content()
