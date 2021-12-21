@@ -63,6 +63,12 @@
 #header .header-info .link:hover{
     color: #FF5B00;
 }
+#header .header-info .link:nth-child(2){
+    color: #000;
+}
+#header .header-info .link:nth-child(2):hover{
+    color: #000;
+}
 
 /* 商品购物车列表 */
 #cart{

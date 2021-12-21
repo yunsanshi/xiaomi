@@ -260,3 +260,48 @@ class Shopcart {
     }
 }
 new Shopcart()
+
+
+
+class Loginstatus{
+    constructor(){
+        this.loginsta()
+        this.cancellation()
+    }
+    loginsta(){
+        let loginInfo = document.querySelectorAll('#header .header-info a')
+        let name = localStorage.getItem('name')
+        if(name){
+            name = JSON.parse(name)
+            loginInfo[0].setAttribute('class','hide')
+            loginInfo[2].setAttribute('class','hide')
+            loginInfo[1].innerHTML = `欢迎${name.username}`
+            loginInfo[1].classList.remove('hide')
+            loginInfo[3].classList.remove('hide')
+        }else{
+            loginInfo[0].classList.remove('hide')
+            loginInfo[2].classList.remove('hide')
+            loginInfo[1].classList.add('hide')
+            loginInfo[3].classList.add('hide')
+        }
+    }
+    cancellation(){
+        let cance = document.querySelectorAll('#header .header-info a')[3]
+        cance.onclick = ()=>{
+            let that = this
+            let name = localStorage.getItem('name')
+            if(!name) return
+            layer.open({
+                title: '注销',
+                content: '是否退出当前登录',
+                btn:['取消','确认'],
+                btn2:function(){
+                    name = JSON.parse(name)
+                    localStorage.removeItem('name')
+                    that.loginsta()
+                }
+              });
+        }
+    }
+}
+new Loginstatus()
