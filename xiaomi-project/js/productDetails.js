@@ -49,7 +49,7 @@ class Content {
         this.contentshow()
     }
     contentshow() {
-        let localId = location.href.split('?')[1].split('=')[1]
+        let localId = location.href.split('?')[1].split('=')[1] - 0
         axios.get('http://localhost:3000/goods', {}).then(res => {
             let h2 = document.querySelector('.content-pro>h2')
             let price1 = document.querySelector('.content-pro .price-info em')
@@ -59,7 +59,7 @@ class Content {
             res.data.some(item => {
                 if (item.id == localId) {
                     h2.innerHTML = item.name
-                    totext[0].innerHTML = item.name +' '
+                    totext[0].innerHTML = item.name + ' '
                     totext[1].innerHTML = li[0].innerHTML + ' '
                     totext[2].innerHTML = li[1].innerHTML
                     price1.innerHTML = item.price
@@ -95,28 +95,28 @@ active('.buy-suit li')
 
 
 // 加入购物车
-class CartDetails{
-    constructor(){
+class CartDetails {
+    constructor() {
         this.cart()
     }
-    cart(){
+    cart() {
         let add = document.querySelector('.content-pro .btn-cartlike .btn-cart')
-        add.onclick = ()=>{
+        let localId = location.href.split('?')[1].split('=')[1]
+        add.onclick = () => {
             let localgoods = localStorage.getItem('xiaomicart')
-            let localId = location.href.split('?')[1].split('=')[1]
             let num = 1
-            if(localgoods){
+            if (localgoods) {
                 localgoods = JSON.parse(localgoods)
-                for(let attr in localgoods){
+                for (let attr in localgoods) {
                     attr == localId && (num += localgoods[attr])
                 }
                 localgoods[localId] = num
-                localStorage.setItem('xiaomicart',JSON.stringify(localgoods))
-            }else{
+                localStorage.setItem('xiaomicart', JSON.stringify(localgoods))
+            } else {
                 localgoods = {
-                    localId : num
+                    [localId] : num
                 }
-                localStorage.setItem('xiaomicart',JSON.stringify(localgoods))
+                localStorage.setItem('xiaomicart', JSON.stringify(localgoods))
             }
             window.location.href = '/xiaomi/xiaomi-project/shopcart.html'
         }

@@ -73,11 +73,20 @@
             <!--购物车-->
             <div class="cart-bar">
                 <a href="/xiaomi/xiaomi-project/shopcart.html" target="_blank">
-                    <span class="fas fa-shopping-cart"></span> 购物车（0）
+                    <span class="fas fa-shopping-cart"></span> 购物车（<em>0</em>）
                 </a>
                 <!--购物车的信息-->
                 <div class="cart-info">
-                    <span>购物车中还没有商品，赶紧选购吧!</span>
+                    <span class="">购物车中还没有商品，赶紧选购吧!</span>
+                    <ul class="hide">
+                    </ul>
+                    <div class="cart-info-total clearfix hide">
+                        <span class="total">
+                            共 <em>2</em> 件商品
+                            <span class="price"><em>218</em>元</span>
+                        </span>
+                        <a href="/xiaomi/xiaomi-project/shopcart.html">去购物车结算</a>
+                    </div>
                 </div>
             </div>
             <!--登录导航-->
@@ -270,8 +279,9 @@
                             <span>Redmi 智能电视X65 2022款</span>
                             <span>￥：5999</span>
                             <span>128万人关注</span>
-                            <span>加入购物车</span>
+                            
                         </a>
+                        <span>加入购物车</span>
                     </li>
                 </ul>
             </div>
@@ -402,8 +412,8 @@
     </div>
     
     <!-- 引入当前页的js -->
-    <script src="js/common.js"></script>
     <script src = "https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="js/common.js"></script>
     <script src="./js/productList.js"></script>
 </body>
 

@@ -85,7 +85,7 @@
 .product-box .pro-list li a span:nth-child(3){
     color: red;
 }
-.product-box .pro-list li a span:last-child{
+.product-box .pro-list li>span{
     width: 120px;
     height: 26px;
     line-height: 26px;
@@ -99,7 +99,7 @@
     transition: all .3s;
     visibility: hidden;
 }
-.product-box .pro-list li a:hover span:last-child{
+.product-box .pro-list li:hover>span{
     visibility: visible;
     transform: translate3d(0,-170%,0);
     color: #fff;

@@ -73,11 +73,30 @@
             <!--购物车-->
             <div class="cart-bar">
                 <a href="/xiaomi/xiaomi-project/shopcart.html" target="_blank">
-                    <span class="fas fa-shopping-cart"></span> 购物车（0）
+                    <span class="fas fa-shopping-cart"></span> 购物车（<em>0</em>）
                 </a>
                 <!--购物车的信息-->
                 <div class="cart-info">
-                    <span>购物车中还没有商品，赶紧选购吧!</span>
+                    <span class="">购物车中还没有商品，赶紧选购吧!</span>
+                    <ul class="hide">
+                        <!-- <li>
+                            <div class="clearfix">
+                                <a href="#none">
+                                    <img alt="" src="//cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1588141296.4258865.jpg?width=60&amp;height=60">
+                                </a>
+                                <a href="#none" class="name">米家手持挂烫机 白色</a>
+                                <span class="price">109元 X 2</span>
+                                <i class="layui-icon layui-icon-close"></i>
+                            </div>
+                        </li> -->
+                    </ul>
+                    <div class="cart-info-total clearfix hide">
+                        <span class="total">
+                            共 <em>2</em> 件商品
+                            <span class="price"><em>218</em>元</span>
+                        </span>
+                        <a href="/xiaomi/xiaomi-project/shopcart.html">去购物车结算</a>
+                    </div>
                 </div>
             </div>
             <!--登录导航-->
@@ -269,6 +288,14 @@
                             手机
                             <i class="layui-icon layui-icon-right"></i>
                         </a>
+                        <!-- 轮播图区域显示手机等 -->
+                        <div class="banner-menu-box clearfix">
+                            <div class="banner-menu-box1 clearfix">
+                                <ul>
+                                    <!-- 渲染数据 -->
+                                </ul>
+                            </div>
+                        </div>
                     </li>
                     <li class="category-item">
                         <a href="" class="title">
@@ -969,8 +996,10 @@
     </div>
 
     <!-- 引入当前页的js -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="./js/index.js"></script>
     <script src="js/common.js"></script>
+    <script src="js/bannerBox.js"></script>
 </body>
 
 </html>

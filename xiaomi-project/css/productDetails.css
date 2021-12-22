@@ -4,6 +4,9 @@
 .link-bar .code{
     z-index: 1001;
 }
+.cart-bar:hover .cart-info{
+    z-index: 1008;
+} 
 
 /* 用户评价栏 */
 #evealuation {

@@ -103,7 +103,7 @@
 /*设置购物车的下拉框*/
 .cart-bar .cart-info {
     position: absolute;
-    width: 316px;
+    width: 340px;
     height: 0;
     overflow: hidden;
     text-align: center;
@@ -117,8 +117,107 @@
 }
 /*鼠标移入，显示购物车详情*/
 .cart-bar:hover .cart-info {
-    height: 100px;
+    height: auto;
 }
+.cart-bar .cart-info ul{
+    height: 150px;
+    overflow-y: auto;
+}
+.cart-bar .cart-info ul li{
+    position: relative;
+    height: 80px;
+    padding: 0 20px;
+}
+.cart-bar .cart-info ul li>div{
+    position: relative;
+    height: 60px;
+    padding: 15px 0;
+    border-top: 1px solid #e0e0e0;
+    line-height: 20px;
+}
+.cart-bar .cart-info ul li:nth-child(1)>div{
+    border-top: 0;
+}
+.cart-bar .cart-info ul li>div a:nth-child(1){
+    width: 60px;
+}
+.cart-bar .cart-info ul li>div img{
+    width: 60px;
+    height: 60px;
+    float: left;
+    margin-right: 10px;
+    border: 0;
+}
+.cart-bar .cart-info ul li>div a{
+    color: #b0b0b0 !important;
+    line-height: 40px;
+    display: inline-block;
+}
+.cart-bar .cart-info ul li>div .name{
+    float: left;
+    width: 95px;
+    height: 40px;
+    line-height: 20px;
+    text-align: left;
+    margin: 10px 0 10px 5px;
+    color: #424242;
+    overflow: hidden;
+}
+.cart-bar .cart-info ul li div .name:hover{
+    color: #ff6700 !important;
+}
+.cart-bar .cart-info ul li>div .price{
+    float: right;
+    margin: 20px 20px 0 5px;
+}
+.cart-bar .cart-info ul li>div i{
+    position: absolute;
+    top: 20px;
+    right: 0;
+    font-size: 16px;
+    opacity: 0;
+    transition: all .2s;
+    line-height: 50px;
+    font-weight: 700;
+}
+.cart-bar .cart-info ul li>div:hover i{
+    opacity: 1;
+}
+.cart-bar .cart-info ul li>div i:hover{
+    color: #000;
+}
+
+.cart-bar .cart-info .cart-info-total{
+    padding: 15px 20px;
+    background: #fafafa;
+}
+.cart-bar .cart-info .cart-info-total .total{
+    float: left;
+    width: 135px;
+    color: #757575;
+    line-height: 1;
+    text-align: left;
+}
+.cart-bar .cart-info .cart-info-total .total .price{
+    display: inline-block;
+    font-weight: 400;
+    color: #ff6700;
+    font-size: 24px;
+    line-height: 25px;
+}
+.cart-bar .cart-info .cart-info-total a{
+    float: right !important;
+    width: 130px;
+    padding: 0;
+    font-size: 14px !important;
+    line-height: 40px;
+    text-align: center;
+    color: #f5f5f5 !important;
+    background: #ff6700;
+    margin: 0;
+}
+
+
 
 /* 页面头部导航 */
 #header{

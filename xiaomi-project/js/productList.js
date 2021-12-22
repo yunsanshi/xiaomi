@@ -23,8 +23,9 @@ class Goodshow{
                     <span>${item.name}</span>
                     <span>￥：${item.price}</span>
                     <span>${newPeople}万人关注</span>
-                    <span onclick="Goodshow.addCart(${item.id},1)">加入购物车</span>
+                    
                 </a>
+                <span onclick="Goodshow.addCart(${item.id},1)">加入购物车</span>
             </li>`
             })
             proUl.innerHTML = html
@@ -52,6 +53,8 @@ class Goodshow{
             }
             localStorage.setItem('xiaomicart',JSON.stringify(cartGoods))
         }
+        layer.msg('你已添加该产品，请前往购物车查看！')
+        // window.location.href = '/xiaomi/xiaomi-project/shopcart.html'
     }
 
 

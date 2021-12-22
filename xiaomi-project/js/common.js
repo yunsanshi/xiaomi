@@ -82,3 +82,103 @@ class Loginstatus{
     }
 }
 new Loginstatus()
+
+
+// 侧边栏和头部的购物车
+class Sidecart{
+    constructor(){
+        this.sideNum()
+        this.topli()
+    }
+    // 渲染头部购物车的内容
+    topli(){
+        let span = document.querySelector('#top-nav .cart-info>span')
+        let ul = document.querySelector('#top-nav .cart-info>ul')
+        let div = document.querySelector('#top-nav .cart-info>div')
+        let cartgoods = localStorage.getItem('xiaomicart')
+        if(!cartgoods){
+            span.classList.remove('hide')
+            ul.classList.add('hide')
+            div.classList.add('hide')
+            return
+        }else{
+            span.classList.add('hide')
+            ul.classList.remove('hide')
+            div.classList.remove('hide')
+        }
+        cartgoods = JSON.parse(cartgoods)
+        axios.get('http://localhost:3000/goods').then(res =>{
+            let axistcart = res.data.filter(item =>{
+                return cartgoods[item.id]
+            })
+            this.topliShow(axistcart,cartgoods)
+        })
+    }
+    topliShow(axistcart,cartgoods){
+        let ul = document.querySelector('#top-nav .cart-info ul')
+        let totalpr = document.querySelector('#top-nav .cart-info .total .price em')
+        let html = ''
+        let topr = 0
+        axistcart.forEach(it => {
+            html += `<li li-id="${it.id}">
+            <div class="clearfix">
+                <a href="#none">
+                    <img alt="" src="${it.src}">
+                </a>
+                <a href="#none" class="name">${it.name}</a>
+                <span class="price">${it.price}元 X ${cartgoods[it.id]}</span>
+                <i class="layui-icon layui-icon-close"></i>
+            </div>
+        </li>`
+            let topr1 = (it.price-0) * cartgoods[it.id]
+            topr += topr1
+        });
+        ul.innerHTML = html
+        totalpr.innerHTML = topr
+        let del = document.querySelectorAll('#top-nav .cart-info ul li i')
+        del.forEach(item =>{
+            let liDel = item.parentNode.parentNode
+            let liId = liDel.getAttribute('li-id')
+            item.onclick = ()=>{
+                liDel.remove()
+                this.modifylocal(liId)
+                this.sideNum()
+                axios.get('http://localhost:3000/goods').then(res =>{
+                    res.data.forEach(item =>{
+                        if(item.id == liId){
+                            totalpr.innerHTML = (totalpr.innerHTML-0)-(item.price-0)*(cartgoods[item.id])
+                        }
+                    })
+                })
+            }
+        })
+        
+    }
+
+    sideNum(){
+        let side = document.querySelector('#right-fixed-bar .right-fixed-item .fixed-text span')
+        let topcart = document.querySelector('#top-nav .cart-bar a em')
+        let topcart1 = document.querySelector('#top-nav .cart-info .total>em')
+        let goods = localStorage.getItem('xiaomicart')
+        goods = JSON.parse(goods)
+        let sidenum = 0
+        for(let attr in goods){
+            sidenum += goods[attr]
+        }
+        side.innerHTML = sidenum
+        topcart.innerHTML = sidenum
+        topcart1.innerHTML = sidenum
+        side.style.color = '#FF5B00'
+        topcart.style.color = '#FF5B00'
+    }
+
+    modifylocal(id,num=0){
+        let goods = localStorage.getItem('xiaomicart')
+        if(!goods) return
+        goods = JSON.parse(goods)
+        num == 0 && delete goods[id]
+        num !=0 && (goods[id] = Number(num))
+        localStorage.setItem('xiaomicart', JSON.stringify(goods))
+    }
+}
+new Sidecart()

@@ -89,7 +89,7 @@ class Banner {
             }
             this.banCir[this.num].classList.add('banner-cr-active')
             // this.banImg[this.num].style.opacity = '1'
-            this.banImg[this.num].style = `opacity:${1};transition-duration: ${800}ms;`
+            this.banImg[this.num].style = `opacity:${1};transition-duration: ${800}ms;` 
         }
     }
 
@@ -115,7 +115,7 @@ class Banner {
         let that = this
         this.timer = setInterval(()=>{
             that.next.onclick()
-        },3000)
+        },5000)
     }
 
     clear(){
@@ -129,3 +129,4 @@ class Banner {
     }
 }
 new Banner()
+

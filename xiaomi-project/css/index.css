@@ -415,3 +415,169 @@
 box-shadow: 0 15px 30px rgb(0 0 0 / 10%); 
 transform: translate3d(0,-2px,0);
 */
+
+
+.ban-category .ban-category-list>li:hover .banner-menu-box {
+    display: block;
+}
+/* 下拉导航框 */
+
+.banner-menu-box {
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 232px;
+    width: 970px;
+    /* height: 430px; */
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    color: #000;
+}
+
+.banner-menu-box1 {
+    margin: 20px 0 50px 20px;
+}
+
+.banner-menu-box1 li {
+    float: left;
+    width: 200px;
+    margin-right: 35px;
+    margin-bottom: 50px;
+}
+.banner-menu-box1 li a{
+    width: 200px;
+    height: 60px;
+    display: inline-block;
+}
+.banner-menu-box1 li img{
+    width: 50px;
+    height: 60px;
+}
+
+.banner-menu-box1 li em {
+    margin-left: 10px;
+}
+
+.banner-menu-box1 li:hover a{
+    background-color: #fff;
+    color: #ff6700;
+    cursor: pointer;
+}
+
+/* .banner-menu-boxa {
+    display: none;
+    position: absolute;
+    top: -74px;
+    left: 238px;
+    width: 990px;
+    height: 462px;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+}
+
+.banner-menu-box1 {
+    margin-left: 20px;
+    margin-bottom: 60px;
+}
+
+.banner-menu-box1 li {
+    float: left;
+}
+
+.banner-menu-box1 li em {
+    margin-left: 10px;
+}
+
+.banner-menu-box1 li:hover {
+    background-color: #fff;
+    color: #ff6700;
+    cursor: pointer;
+}
+
+.banner-menu-boxb {
+    display: none;
+    position: absolute;
+    top: -118px;
+    left: 238px;
+    width: 990px;
+    height: 462px;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+}
+
+.banner-menu-boxc {
+    display: none;
+    position: absolute;
+    top: -162px;
+    left: 238px;
+    width: 980px;
+    height: 462px;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+}
+
+.banner-menu-boxd {
+    display: none;
+    position: absolute;
+    top: -205px;
+    left: 238px;
+    width: 990px;
+    height: 462px;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+}
+
+.banner-menu-boxe {
+    display: none;
+    position: absolute;
+    top: -250px;
+    left: 238px;
+    width: 990px;
+    height: 462px;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+}
+
+.banner-menu-boxf {
+    display: none;
+    position: absolute;
+    top: -295px;
+    left: 238px;
+    width: 990px;
+    height: 462px;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+}
+
+.banner-menu-boxg {
+    display: none;
+    position: absolute;
+    top: -338px;
+    left: 238px;
+    width: 987px;
+    height: 462px;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+}
+
+.banner-menu-boxh {
+    display: none;
+    position: absolute;
+    top: -383px;
+    left: 238px;
+    width: 987px;
+    height: 462px;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+}
+
+.banner-menu-boxn {
+    display: none;
+    position: absolute;
+    top: -426px;
+    left: 238px;
+    width: 987px;
+    height: 462px;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+} */

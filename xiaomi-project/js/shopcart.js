@@ -166,6 +166,10 @@ class Shopcart {
         let num = tar.nextElementSibling
         let price = tar.parentNode.previousElementSibling.querySelector('em').innerHTML
         let sub = tar.parentNode.nextElementSibling.querySelector('em')
+        if(num.value <= 1){
+            layer.msg('数量最小不能低于1')
+            return
+        }
         // 计算点击-时的数值变化
         num.value > 1 && (num.value = num.value - 1)
         sub.innerHTML = parseInt((price * num.value) * 100) / 100
@@ -179,6 +183,10 @@ class Shopcart {
         let num = tar.previousElementSibling
         let price = tar.parentNode.previousElementSibling.querySelector('em').innerHTML
         let sub = tar.parentNode.nextElementSibling.querySelector('em')
+        if(num.value >= 99){
+            layer.msg('数量最多不能多于99')
+            return
+        }
         // 点击add时进行计算
         num.value = num.value - 0 + 1
         sub.innerHTML = parseInt((num.value * price) * 100) / 100
@@ -195,8 +203,12 @@ class Shopcart {
         // 给输入框绑定输入事件
         tar.addEventListener('input', function () {
             this.value = this.value.replace(/(^0?|\D)/g, '')
-            if (this.value == '') {
+            if (this.value <= 1) {
+                layer.msg('数量最小不能低于1')
                 this.value = 1
+            }else if(this.value > 99){
+                layer.msg('数量最多不能多于99')
+                this.value = 99
             }
             sub.innerHTML = parseInt((price * this.value) * 100) / 100
             tr.querySelector('#checkone').checked && that.subTotal()
@@ -262,7 +274,7 @@ class Shopcart {
 new Shopcart()
 
 
-
+// 登录状态
 class Loginstatus{
     constructor(){
         this.loginsta()
