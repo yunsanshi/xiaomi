@@ -35,11 +35,23 @@ class retrunTop{
                 reTop.classList.remove('block')
             }
         })
+        reTop.onclick = ()=>{
+            let timer=setInterval(function(){
+                var scrollTop=document.documentElement.scrollTop||document.body.scrollTop;
+                var ispeed=Math.floor(-scrollTop/6);
+                // console.log(ispeed)
+                if(scrollTop==0){
+                    clearInterval(timer);
+                }
+                document.documentElement.scrollTop=document.body.scrollTop=scrollTop+ispeed;
+            },30)
+        }
     }
 }
 new retrunTop()
-// 回到顶部
 
+
+// 登录状态
 class Loginstatus{
     constructor(){
         this.loginsta()

@@ -17,15 +17,15 @@ class Login {
             }
             let data = `username=${this.name.value}&password=${this.pwd.value}`
             axios.get('http://localhost:3000/users?' + data + '').then(res => {
-                console.log(res);
+                // console.log(res);
                 if (res.data == '') {
                     alert('请输入正确的用户名和密码')
                     // this.name.value = ''
                     this.pwd.value = ''
-                    console.log(1);
+                    // console.log(1);
                     return
                 }
-                console.log(res.data[0].username);
+                // console.log(res.data[0].username);
                 this.name.value = ''
                 this.pwd.value = ''
                 Login.addCart('username', res.data[0].username)
@@ -50,9 +50,6 @@ class Login {
             }else{
                 alert('已登录其他账号')
             }
-
-
-
         } else { // 无数据
             cartGoods = {
                 [username]: name

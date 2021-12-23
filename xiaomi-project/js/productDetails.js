@@ -42,7 +42,7 @@ class Details {
 }
 new Details()
 
-
+// 获取地址栏id
 class Content {
     constructor() {
         // console.log(location.href.split('?')[1].split('=')[1]);
@@ -56,6 +56,7 @@ class Content {
             let price2 = document.querySelector('.content-pro .total-list .total-pr span')
             let totext = document.querySelectorAll('.content-pro .total-list .total-text span')
             let li = document.querySelectorAll('.buy-option ul .active')
+            let evealua = document.querySelector('#evealuation h2')
             res.data.some(item => {
                 if (item.id == localId) {
                     h2.innerHTML = item.name
@@ -64,6 +65,7 @@ class Content {
                     totext[2].innerHTML = li[1].innerHTML
                     price1.innerHTML = item.price
                     price2.innerHTML = item.price
+                    evealua.innerHTML = item.name
                 }
             })
         })

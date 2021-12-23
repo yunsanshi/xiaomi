@@ -115,7 +115,7 @@ class Banner {
         let that = this
         this.timer = setInterval(()=>{
             that.next.onclick()
-        },5000)
+        },3000)
     }
 
     clear(){
