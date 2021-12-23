@@ -131,8 +131,15 @@ class Shopcart {
                             window.location.href = '/xiaomi/xiaomi-project/login.html'
                         }
                     })
+                }else{
+                    layer.open({
+                        title:'',
+                        content : '正在跳转支付页',
+                        btn :'',
+                        closeBtn:'',
+                        time : 3000
+                    })
                 }
-                window.location.href = '#none'
             }
             return
         } else {
