@@ -79,12 +79,71 @@
 }
 .detailsBox .img-left{
     width: 606px;
-    position: relative;
+    /* position: relative; */
 }
-.detailsBox .img-left img{
+/* 放大镜 */
+.img-left .s_box {
+    width: 560px;
+    height: 560px;
+    position: absolute;
+    /* left: 50px;
+    top: 100px; */
+}
+
+.img-left .s_box img {
     width: 560px;
     height: 560px;
 }
+
+.img-left .s_box span {
+    width: 160px;
+    height: 100px;
+    background: rgba(200, 200, 200, 0.5);
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: none;
+    cursor: move;
+}
+
+.img-left .b_box {
+    width: 400px;
+    height: 300px;
+    overflow: hidden;
+    position: absolute;
+    left: 600px;
+    top: 200px;
+    display: none;
+    z-index: 800;
+}
+
+.img-left .b_box img {
+    width: 1200px;
+    height: 900px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.img-left .list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: absolute;
+    left: 46px;
+    top: 590px;
+}
+
+.img-left .list li {
+    float: left;
+    margin: 0 10px;
+}
+.img-left .list li img {
+    width: 100px;
+    height: 80px;
+}
+
+
 .detailsBox .content-pro{
     flex: 1;
     margin-left: 20px;
